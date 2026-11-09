@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 30 20;
+    --foreground: 35 30 20;
+    --border: 35 15% 85%;
+    --card: 0 0% 100%;
+    --card-foreground: 35 30 20;
+    --primary: 35 61% 65%;
+    --primary-foreground: 35 30 20;
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 35 30 20;
+    --muted: 35 15% 95%;
+    --muted-foreground: 35 15% 45%;
+    --accent: 35 61% 65%;
+    --accent-foreground: 35 30 20;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 35 15% 95%;
+    --border: 222 30% 30%;
+    --card: 222 47% 11%;
+    --card-foreground: 35 15% 95%;
+    --primary: 35 61% 65%;
+    --primary-foreground: 35 30 20;
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 35 30 20;
+    --muted: 222 30% 20%;
+    --muted-foreground: 35 15% 65%;
+    --accent: 35 61% 65%;
+    --accent-foreground: 35 30 20;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-warm-white text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glassmorphism {
+    background: rgba(250, 248, 245, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(224, 169, 109, 0.2);
+  }
+
+  .glassmorphism-dark {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(224, 169, 109, 0.2);
+  }
+
+  .gradient-rose-gold {
+    background: linear-gradient(135deg, #E0A96D 0%, #D4AF37 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #E0A96D 0%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar Styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #F59E0B transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #F59E0B;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #D97706;
+}

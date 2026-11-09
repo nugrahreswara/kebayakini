@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-debug.log*
+
+# Next.js
+# .next/  # Temporarily commented out for deployment
+out/
+build/
+dist/
+
+# Production
+*.log
+
+# Environment
+.env
+.env*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.tsbuildinfo
